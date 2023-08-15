@@ -2,10 +2,10 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import colors from 'colors';
 
-dotenv.config()
+dotenv.config();
 
-const USERNAME = process.env.MONGO_USERNAME
-const PASSWORD = encodeURIComponent(process.env.MONGO_PASSWORD)
+const USERNAME = process.env.MONGO_USERNAME;
+const PASSWORD = encodeURIComponent(process.env.MONGO_PASSWORD);
 
 
 const connectDB = async (server) => {
@@ -24,7 +24,7 @@ const connectDB = async (server) => {
                 console.log(`${error}`.red)
                 process.exit(1)
             })
-}
+};
 
 
 export default connectDB;
